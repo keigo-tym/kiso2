@@ -3,5 +3,9 @@ require_once("MyClass.php");
 
 $myClass1 = new MyClass();
 $myClass2 = new MyClass();
-var_dump($myClass1);
-var_dump($myClass2);
+
+$myClass1->myProperty = "Hello";
+$myClass2->myProperty = "By";
+
+echo $myClass1->myProperty;
+echo $myClass2->myProperty;
