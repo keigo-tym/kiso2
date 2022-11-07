@@ -3,7 +3,7 @@ class SimpleCalc
 {
     private $number;
 
-    public function __construct($number)
+    public function __construct($number = 0)
     {
         $this->number = $number;
     }
