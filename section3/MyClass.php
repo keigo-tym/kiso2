@@ -3,6 +3,11 @@ class MyClass
 {
     private $myProperty;
 
+    public function __construct($myProperty)
+    {
+        $this->myProperty = $myProperty;
+    }
+
     public function myMethod($x)
     {
         echo $this->myProperty . " " . $x . PHP_EOL;
