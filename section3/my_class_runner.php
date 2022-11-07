@@ -1,7 +1,5 @@
 <?php
 require_once("MyClass.php");
 
-$myClass = new MyClass();
-
-$myClass->setMyProperty("Hello");
-echo $myClass->getMyProperty();
+$myClass = new MyClass("Hello");
+$myClass->myMethod("Andy");
