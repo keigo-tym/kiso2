@@ -1,7 +1,17 @@
 <?php
 class SimpleCalc
 {
-    public $number;
+    private $number;
+
+    public function setNumber($number)
+    {
+        $this->number = $number;
+    }
+
+    public function getNumber()
+    {
+        return $this->number;
+    }
 
     public function add($x)
     {
@@ -12,4 +22,5 @@ class SimpleCalc
     {
         echo $this->number . PHP_EOL;
     }
+
 }
