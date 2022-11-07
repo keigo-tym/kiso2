@@ -3,6 +3,11 @@ class SimpleCalc
 {
     private $number;
 
+    public function __construct($number)
+    {
+        $this->number = $number;
+    }
+
     public function setNumber($number)
     {
         $this->number = $number;
