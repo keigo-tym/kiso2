@@ -35,6 +35,10 @@ class SimpleCalc
 
     public function divide($x)
     {
+        if ($x == 0) {
+            $e = new Exception("Divide by 0.");
+            throw $e;
+        }
         $this->number = $this->number / $x;
     }
 
