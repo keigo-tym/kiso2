@@ -1,12 +1,6 @@
 <?php
-require_once("MyClass.php");
+require_once("MySubClass.php");
 
-try {
-    $myClass = new MyClass("Hello");
-    $myClass->myMethod("Karen");
-} catch (Exception $e) {
-    echo "Catch exception." . PHP_EOL;
-    echo $e->getMessage() . PHP_EOL;
-} finally {
-    echo "finally" . PHP_EOL;
-}
+$mySubClass = new MySubClass("Hello");
+$mySubClass->myMethod("Karen");
+$mySubClass->myMethod2();
