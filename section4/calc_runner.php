@@ -1,15 +1,8 @@
 <?php
-require_once("SimpleCalc.php");
+require_once("GreatCalc.php");
 
-try {
-    $calc = new SimpleCalc();
+$calc = new GreatCalc();
 
-    $calc->add(10);
-    $calc->subtract(5);
-    $calc->multiply(10);
-    $calc->divide(0);
-
-    $calc->show();
-} catch (Exception $e) {
-    echo "Exception: " . $e->getMessage() . PHP_EOL;
-}
+$calc->add(2);
+$calc->pow(3);
+$calc->show();
