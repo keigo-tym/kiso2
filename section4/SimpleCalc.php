@@ -1,7 +1,7 @@
 <?php
 class SimpleCalc
 {
-    private $number;
+    protected $number;
 
     public function __construct($number = 0)
     {
