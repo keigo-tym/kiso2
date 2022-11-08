@@ -10,6 +10,10 @@ class MyClass
 
     public function myMethod($x)
     {
+        if ($x === "") {
+            $e = new Exception("Invalid argument.");
+            throw $e;
+        }
         echo $this->myProperty . " " . $x . PHP_EOL;
     }
 
