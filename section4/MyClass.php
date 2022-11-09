@@ -1,7 +1,7 @@
 <?php
 class MyClass
 {
-    private $myProperty;
+    protected $myProperty;
 
     public function __construct($myProperty)
     {
