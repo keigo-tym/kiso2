@@ -1,8 +1,13 @@
 <?php
 require_once("GreatCalc.php");
+require_once("CalcException.php");
 
-$calc = new GreatCalc();
+try {
+    $calc = new GreatCalc();
 
-$calc->add(2);
-$calc->pow(3);
-$calc->show();
+    $calc->divide(0);
+
+    $calc->show();
+} catch(CalcException $e) {
+    echo "CalcException: " . $e->getMessage() . PHP_EOL;
+}
