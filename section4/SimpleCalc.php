@@ -5,9 +5,17 @@ class SimpleCalc
 {
     protected $number;
 
+    public static $instanceCount = 0;
+
+    public static function showInstanceCount()
+    {
+        echo "Instance count: " . self::$instanceCount . PHP_EOL;
+    }
+
     public function __construct($number = 0)
     {
         $this->number = $number;
+        self::$instanceCount++;
     }
 
     public function setNumber($number)
