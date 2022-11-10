@@ -3,6 +3,13 @@ class MyClass
 {
     protected $myProperty;
 
+    public static $myStaticProperty;
+
+    public static function myStaticMethod($x)
+    {
+        echo self::$myStaticProperty . " / " . $x . PHP_EOL;
+    }
+
     public function __construct($myProperty)
     {
         $this->myProperty = $myProperty;
