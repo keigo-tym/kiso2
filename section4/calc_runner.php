@@ -1,13 +1,8 @@
 <?php
-require_once("GreatCalc.php");
-require_once("CalcException.php");
+require_once("SimpleCalc.php");
 
-try {
-    $calc = new GreatCalc();
+$calc1 = new SimpleCalc();
+$calc2 = new SimpleCalc();
+$calc3 = new SimpleCalc();
 
-    $calc->divide(0);
-
-    $calc->show();
-} catch(CalcException $e) {
-    echo "CalcException: " . $e->getMessage() . PHP_EOL;
-}
+SimpleCalc::showInstanceCount();
