@@ -4,3 +4,5 @@ create table categories(
 );
 
 insert into categories (id, title) values (1, 'programming');
+
+select * from categories;
