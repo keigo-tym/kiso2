@@ -6,10 +6,10 @@ create table categories(
 drop table categories;
 
 insert into categories (id, title) values (1, 'Programming');
-
 insert into categories (id, title) values (2, 'Design');
-
 insert into categories (id, title) values (3, 'Marketing');
+
+insert into categories (id, title) values (3, 'Music');
 
 select * from categories;
 
