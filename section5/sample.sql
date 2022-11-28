@@ -13,10 +13,10 @@ insert into categories (id, title) values (3, 'Music');
 
 select * from categories;
 
-update categories set title = 'PG' where id = 1;
-
-delete from categories where id = 1;
-
 select id, title from categories;
 select id, title categories from categories where id >= 2;
 select id, title categories from categories order by title;
+
+update categories set title = 'PG' where id = 1;
+
+delete from categories where id = 1;
