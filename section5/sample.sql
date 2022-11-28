@@ -19,4 +19,7 @@ select id, title categories from categories order by title;
 
 update categories set title = 'PG' where id = 1;
 
+update categories set id = 100, title = 'PG' where id = 1;
+update categories set title = 'Test';
+
 delete from categories where id = 1;
