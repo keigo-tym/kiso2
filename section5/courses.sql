@@ -15,3 +15,5 @@ select id, title, learning_time, category_id from courses where id = 4;
 select * from courses where id = 4;
 
 update courses set learning_time = 100 where id = 4;
+
+delete from courses where id = 4;
