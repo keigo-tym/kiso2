@@ -35,3 +35,6 @@ select * from courses where not learning_time = 50;
 
 select * from courses where learning_time in (30, 50, 100);
 select * from courses where learning_time = 30 or learning_time = 50 or learning_time = 100;
+
+select * from courses where learning_time between 30 and 50;
+select * from courses where learning_time >= 30 and learning_time <= 50;
