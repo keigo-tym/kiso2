@@ -51,3 +51,8 @@ select * from courses order by learning_time desc;
 select * from courses order by learning_time asc;
 select * from courses order by learning_time desc, id desc;
 select * from courses where learning_time >= 50 order by id desc;
+
+select id, upper(title) from courses;
+select id, lower(title) from courses;
+select id, length(title) from courses;
+select id, title, ifnull(category_id, 0) from courses;
