@@ -50,3 +50,4 @@ select * from courses order by learning_time;
 select * from courses order by learning_time desc;
 select * from courses order by learning_time asc;
 select * from courses order by learning_time desc, id desc;
+select * from courses where learning_time >= 50 order by id desc;
