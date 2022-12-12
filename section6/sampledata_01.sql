@@ -38,3 +38,6 @@ select * from courses where learning_time = 30 or learning_time = 50 or learning
 
 select * from courses where learning_time between 30 and 50;
 select * from courses where learning_time >= 30 and learning_time <= 50;
+
+select * from courses where category_id is null;
+select * from courses where category_id = null;
