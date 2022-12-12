@@ -56,3 +56,10 @@ select id, upper(title) from courses;
 select id, lower(title) from courses;
 select id, length(title) from courses;
 select id, title, ifnull(category_id, 0) from courses;
+
+select category_id, sum(learning_time) from courses group by category_id;
+select category_id, avg(learning_time) from courses group by category_id;
+select category_id, count(learning_time) from courses group by category_id;
+select category_id, max(learning_time) from courses group by category_id;
+select category_id, min(learning_time) from courses group by category_id;
+select category_id, count(learning_time) from courses group by category_id having count(learning_time) = 1;
