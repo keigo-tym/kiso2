@@ -41,3 +41,7 @@ select * from courses where learning_time >= 30 and learning_time <= 50;
 
 select * from courses where category_id is null;
 select * from courses where category_id = null;
+
+select * from courses where title like 'PHP%';
+select * from courses where title like '%Basic';
+select * from courses where title like '____D%';
