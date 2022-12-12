@@ -31,3 +31,4 @@ select * from courses;
 select * from courses where learning_time = 50;
 select * from courses where learning_time = 50 and category_id = 1;
 select * from courses where learning_time = 50 or category_id = 1;
+select * from courses where not learning_time = 50;
