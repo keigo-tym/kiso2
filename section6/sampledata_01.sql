@@ -63,3 +63,8 @@ select category_id, count(learning_time) from courses group by category_id;
 select category_id, max(learning_time) from courses group by category_id;
 select category_id, min(learning_time) from courses group by category_id;
 select category_id, count(learning_time) from courses group by category_id having count(learning_time) = 1;
+
+select id, title from (select * from courses where category_id = 1);
+select * from courses where learning_time = (select max(learning_time) from courses);
+select id, title, learning_time, (select max(learning_time) from courses) max_time from courses;
+delete from courses where id = (select max(id) from courses);
