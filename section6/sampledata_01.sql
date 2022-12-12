@@ -45,3 +45,8 @@ select * from courses where category_id = null;
 select * from courses where title like 'PHP%';
 select * from courses where title like '%Basic';
 select * from courses where title like '____D%';
+
+select * from courses order by learning_time;
+select * from courses order by learning_time desc;
+select * from courses order by learning_time asc;
+select * from courses order by learning_time desc, id desc;
