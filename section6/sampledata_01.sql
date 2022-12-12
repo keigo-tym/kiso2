@@ -26,3 +26,4 @@ insert into courses (id, title, learning_time, category_id) values (5, 'Japan''s
 select id, title, learning_time from courses;
 select title, learning_time, id from courses;
 select title as course_title, learning_time from courses;
+select * from courses;
