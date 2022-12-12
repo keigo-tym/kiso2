@@ -22,3 +22,7 @@ insert into courses (id, title, learning_time, category_id) values (2, 'PHP Data
 insert into courses (id, title, learning_time, category_id) values (3, 'Python Basic', 40,  1);
 insert into courses (id, title, learning_time, category_id) values (4, 'Web Design', 50, 2);
 insert into courses (id, title, learning_time, category_id) values (5, 'Japan''s History', 100, null);
+
+select id, title, learning_time from courses;
+select title, learning_time, id from courses;
+select title as course_title, learning_time from courses;
