@@ -73,3 +73,8 @@ select * from courses co inner join categories ca on co.category_id = ca.id;
 select * from courses co left outer join categories ca on co.category_id = ca.id;
 select * from categories ca left outer join courses co on ca.id = co.category_id;
 select * from categories cross join courses;
+
+begin;
+insert into categories values(4, 'Piano');
+insert into categories values(5, 'Guitar');
+commit;
