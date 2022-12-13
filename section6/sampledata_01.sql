@@ -68,3 +68,7 @@ select id, title from (select * from courses where category_id = 1);
 select * from courses where learning_time = (select max(learning_time) from courses);
 select id, title, learning_time, (select max(learning_time) from courses) max_time from courses;
 delete from courses where id = (select max(id) from courses);
+
+select * from courses co inner join categories ca on co.category_id = ca.id;
+select * from courses co left outer join categories ca on co.category_id = ca.id;
+select * from categories ca left outer join courses co on ca.id = co.category_id;
