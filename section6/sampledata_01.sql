@@ -78,3 +78,8 @@ begin;
 insert into categories values(4, 'Piano');
 insert into categories values(5, 'Guitar');
 commit;
+
+begin;
+insert into categories values(4, 'Piano');
+insert into categories values(5, 'Guitar');
+rollback;
