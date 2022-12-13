@@ -72,3 +72,4 @@ delete from courses where id = (select max(id) from courses);
 select * from courses co inner join categories ca on co.category_id = ca.id;
 select * from courses co left outer join categories ca on co.category_id = ca.id;
 select * from categories ca left outer join courses co on ca.id = co.category_id;
+select * from categories cross join courses;
