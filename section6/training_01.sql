@@ -13,3 +13,5 @@ select count(*) category_count from categories;
 select * from categories where id = (select max(id) from categories);
 
 select ca.title category_title, co.title course_title from categories ca inner join courses co on ca.id = co.category_id;
+
+select ca.title category_title, co.title course_title from categories ca inner join courses co on ca.id = co.category_id where ca.id = 1;
