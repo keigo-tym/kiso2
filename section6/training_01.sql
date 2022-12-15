@@ -9,3 +9,5 @@ select upper(title) u_title from categories;
 
 select count(title) category_count from categories;
 select count(*) category_count from categories;
+
+select * from categories where id = (select max(id) from categories);
