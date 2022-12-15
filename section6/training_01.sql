@@ -16,4 +16,5 @@ select ca.title category_title, co.title course_title from categories ca inner j
 
 select ca.title category_title, co.title course_title from categories ca inner join courses co on ca.id = co.category_id where ca.id = 1;
 
-select ca.title category_title, co.title course_title from categories ca left join courses co on ca.id = co.category_id;
+select ca.title category_title, co.title course_title from courses co left outer join categories ca on co.category_id = ca.id;
+
