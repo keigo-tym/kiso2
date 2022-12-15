@@ -18,3 +18,4 @@ select ca.title category_title, co.title course_title from categories ca inner j
 
 select ca.title category_title, co.title course_title from courses co left outer join categories ca on co.category_id = ca.id;
 
+select ca.title, count(co.id) course_count from categories ca left outer join courses co on ca.id = co.category_id group by ca.title order by course_count desc;
