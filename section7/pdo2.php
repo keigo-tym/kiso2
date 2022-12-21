@@ -4,7 +4,7 @@ $pdo = new PDO($dsn);
 
 $sql = "select id, title from categories";
 $st = $pdo->query($sql);
-$row = $st->fetchAll();
+$rows = $st->fetchAll();
 foreach ($rows as $row) {
     echo $row["id"] . ":" . $row["title"] . PHP_EOL;
 }
