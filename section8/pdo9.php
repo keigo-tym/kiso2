@@ -2,9 +2,9 @@
 try {
     $dsn = "sqlite:eldb.sqlite3";
     $pdo = new PDO($dsn);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "select id, title from categori";
+    $sql = "select id, title from categories";
     $st = $pdo->query($sql);
     var_dump($st);
 
