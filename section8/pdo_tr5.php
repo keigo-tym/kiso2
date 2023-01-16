@@ -11,8 +11,9 @@ try  {
     $ps = $pdo->prepare($sql);
     $ps->bindValue(1, $id, PDO::PARAM_INT);
     $ps->execute();
-
-    var_dump($ps);
+    $row = $ps->fetch();
+    
+    echo $row["title"] . PHP_EOL;
 
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
