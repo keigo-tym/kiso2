@@ -1,5 +1,5 @@
 <?php
-$id = 3;
+$id = 9;
 $sql = "select * from categories where id = ?";
 
 try  {
@@ -12,8 +12,9 @@ try  {
     $ps->bindValue(1, $id, PDO::PARAM_INT);
     $ps->execute();
     $row = $ps->fetch();
-    
-    echo $row["title"] . PHP_EOL;
+    if ($row !== false) {
+        echo $row["title"] . PHP_EOL;
+    }
 
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
