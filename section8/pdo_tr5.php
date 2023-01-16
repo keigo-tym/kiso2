@@ -1,5 +1,5 @@
 <?php
-$id = 9;
+$id = 3;
 $sql = "select * from categories where id = ?";
 
 try  {
