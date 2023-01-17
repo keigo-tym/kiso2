@@ -39,5 +39,7 @@ try {
         </tr>
         <?php } ?>
     </table>
+    <hr>
+    <a href="create.php">NEW</a>
 </body>
 </html>
