@@ -5,7 +5,7 @@
     <title>PHP DB</title>
 </head>
 <body>
-    <h3>Category - New</h3>
+    <h3>Categories - New</h3>
     <hr>
     <form action="store.php" method="post">
         ID: <input type="number" name="id"><br>
