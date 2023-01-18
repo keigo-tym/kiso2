@@ -31,11 +31,13 @@ try {
         <tr>
             <th>ID</th>
             <th>TITLE</th>
+            <th>SHOW</th>
         </tr>
         <?php foreach ($categories as $category) { ?>
         <tr>
             <td><?= htmlspecialchars($category["id"]) ?></td>
             <td><?= htmlspecialchars($category["title"]) ?></td>
+            <td><a href="show.php?id=<?= htmlspecialchars($category['id']) ?>">SHOW</a></td>
         </tr>
         <?php } ?>
     </table>
