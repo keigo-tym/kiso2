@@ -47,6 +47,10 @@ try {
     ID: <?= htmlspecialchars($category["id"]) ?><br>
     TITLE: <?= htmlspecialchars($category["title"]) ?><br>
     <a href="edit.php?id=<?= htmlspecialchars($category['id']) ?>">EDIT</a>
+    <form action="destroy.php" method="post">
+        <input type="hidden" name="id" value="<?= htmlspecialchars($category['id']) ?>">
+        <button type="submit">DESTROY</button>
+    </form>
     <hr>
     <a href="index.php">BACK</a>
 </body>
