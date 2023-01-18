@@ -46,6 +46,7 @@ try {
     <hr>
     ID: <?= htmlspecialchars($category["id"]) ?><br>
     TITLE: <?= htmlspecialchars($category["title"]) ?><br>
+    <a href="edit.php?id=<? htmlspecialchars($category['id']) ?>">EDIT</a>
     <hr>
     <a href="index.php">BACK</a>
 </body>
