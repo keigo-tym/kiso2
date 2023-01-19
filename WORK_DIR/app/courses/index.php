@@ -1,5 +1,23 @@
 <?php
-// TODO
+try {
+  $dsn = "sqlite:../../db/eldb.sqlite3";
+  $options = [
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_EMULATE_PREPARES => false
+  ];
+  $pdo = new PDO($dsn, null, null, $options);
+
+  $sql = "select co.id, co.title, co.learning_time, ifnull(ca.title, '') category_title 
+        from courses co left join categories ca on co.category_id = ca.id order by co.id";
+  $ps = $pdo->prepare($sql);
+  $ps->execute();
+  $courses = $ps->fetchAll();
+} catch (PDOException $e) {
+  error_log("PDOException: " . $e->getMessage());
+  header("Location: error.php");
+  exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
