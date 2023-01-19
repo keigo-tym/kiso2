@@ -44,5 +44,7 @@ try {
     </tr>      
     <?php } ?>
   </table>
+  <hr>
+  <a href="create.php">CREATE</a>
 </body>
 </html>
