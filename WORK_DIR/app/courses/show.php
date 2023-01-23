@@ -21,10 +21,8 @@ try {
 
     $sql = "select
             co.id, co.title, co.learning_time, ca.title category_title
-            from
-            courses co left join categories ca on category_id = ca.id
-            where
-            co.id = :id";
+            from courses co left join categories ca on co.category_id = ca.id
+            where co.id = :id";
     $ps = $pdo->prepare($sql);
     $ps->bindValue(":id", $id, PDO::PARAM_INT);
     $ps->execute();
