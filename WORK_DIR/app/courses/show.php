@@ -51,6 +51,7 @@ try {
   TITLE: <?= htmlspecialchars($course['title']) ?><br>
   L-TIME: <?= htmlspecialchars($course['learning_time']) ?><br>
   CATEGORY: <?= htmlspecialchars($course['category_title']) ?><br>
+  <a href="edit.php?id=<?= htmlspecialchars($course['id']) ?>">EDIT</a>
   <hr>
   <a href="index.php">BACK</a>
 </body>
