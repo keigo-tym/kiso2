@@ -52,6 +52,10 @@ try {
   L-TIME: <?= htmlspecialchars($course['learning_time']) ?><br>
   CATEGORY: <?= htmlspecialchars($course['category_title']) ?><br>
   <a href="edit.php?id=<?= htmlspecialchars($course['id']) ?>">EDIT</a>
+  <form action="destroy.php" method="post">
+    <input type="hidden" name="id" value="<?= htmlspecialchars($course['id']) ?>">
+    <button type="submit">DESTROY</button>
+  </form>
   <hr>
   <a href="index.php">BACK</a>
 </body>
