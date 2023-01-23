@@ -29,15 +29,10 @@ try {
       exit();
   }
 
-  $sql2 = "select id, title from categories order by id";
-  $ps2 = $pdo->prepare($sql2);
-  $ps2->execute();
-  $categories = $ps2->fetchAll();
-  if ($categories === false) {
-    error_log("Invalid id. $id");
-    header("Location: error.php");
-    exit();
-}
+  $sql = "select id, title from categories order by id";
+  $ps = $pdo->prepare($sql);
+  $ps->execute();
+  $categories = $ps->fetchAll();
 } catch (PDOException $e) {
   error_log("PDOException: " . $e->getMessage());
   header("Location: error.php");
