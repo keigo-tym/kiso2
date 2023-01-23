@@ -20,7 +20,7 @@ try {
     $pdo = new PDO("sqlite:../../db/eldb.sqlite3",null, null, $options);
 
     $sql = "select
-            co.id, co.title, co.learning_time, ca.title category_title
+            co.id, co.title, co.learning_time, ifnull(ca.title, '') category_title
             from courses co left join categories ca on co.category_id = ca.id
             where co.id = :id";
     $ps = $pdo->prepare($sql);
