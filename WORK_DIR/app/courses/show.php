@@ -1,5 +1,4 @@
 <?php
-// TODO
 $id = (string)filter_input(INPUT_GET, "id");
 if ($id === "") {
     error_log("Validate: id is required.");
