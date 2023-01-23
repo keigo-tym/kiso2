@@ -34,6 +34,7 @@ try {
       <th>TITLE</th>
       <th>L-TIME</th>
       <th>CATEGORY</th>
+      <th>SHOW</th>
     </tr>
     <?php foreach ($courses as $course) { ?>
     <tr>
@@ -41,6 +42,7 @@ try {
       <td><?= htmlspecialchars($course["title"]) ?></td>
       <td><?= htmlspecialchars($course["learning_time"]) ?></td>
       <td><?= htmlspecialchars($course["category_title"]) ?></td>
+      <td><a href="show.php?id=<?= htmlspecialchars($course['id'])?>">SHOW</a></td>
     </tr>      
     <?php } ?>
   </table>
