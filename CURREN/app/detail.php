@@ -33,7 +33,7 @@ try {
     $ps = $pdo->prepare($sql);
     $ps->bindValue(":id", $course_id, PDO::PARAM_INT);
     $ps->execute();
-    $course = $ps->fetchAll();
+    $course = $ps->fetch();
     if ($course === false) {
         error_log("Invalid course id." . $course_id);
         header("Location: error.php");
