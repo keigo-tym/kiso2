@@ -1,5 +1,8 @@
 <?php
 require_once("../libs/functions.php");
+require_once("../libs/CourseDAO.php");
+require_once("../libs/SectionDAO.php");
+
 $course_id = (string)filter_input(INPUT_GET, "course_id");
 if ($course_id === "") {
     error_log("Validate: course_id is required.");
@@ -21,41 +24,17 @@ if ($section_id !== "" && filter_var($section_id, FILTER_VALIDATE_INT) === false
 
 try {
     $pdo = new_PDO();
-    $sql = "select 
-                co.id,
-                co.title course_title,
-                ca.title category_title
-            from
-                courses co
-                inner join categories ca on co.category_id = ca.id
-            where
-                co.id = :id";
-    $ps = $pdo->prepare($sql);
-    $ps->bindValue(":id", $course_id, PDO::PARAM_INT);
-    $ps->execute();
-    $course = $ps->fetch();
+
+    $course_dao = new CourseDAO($pdo);
+    $course = $course_dao->selectById($course_id);
     if ($course === false) {
         error_log("Invalid course id." . $course_id);
         header("Location: error.php");
         exit();
     }
 
-    $sql = "select
-                se.id,
-                se.title,
-                se.no,
-                se.url,
-                se.course_id
-            from
-                sections se
-            where
-                se.course_id = :course_id
-            order by
-                se.no";
-    $ps = $pdo->prepare($sql);
-    $ps->bindValue(":course_id", $course_id, PDO::PARAM_INT);
-    $ps->execute();
-    $sections = $ps->fetchAll();
+    $section_dao = new SectionDAO($pdo);
+    $sections = $section_dao->selectByCourseId($course_id);
     if (count($sections) === 0) {
         error_log("Invalid sections." . $course_id);
         header("Location: error.php");
