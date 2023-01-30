@@ -1,20 +1,12 @@
 <?php
 require_once("../libs/functions.php");
+require_once("../libs/CourseDAO.php");
 
 try {
     $pdo = new_PDO();
 
-    $sql = "select
-                co.id,
-                co.title course_title,
-                ca.title category_title 
-            from 
-                courses co 
-                inner join categories ca on co.category_id = ca.id 
-            order by 
-                co.id";
-    $st = $pdo->query($sql);
-    $courses = $st->fetchAll();
+    $course_dao = new CourseDAO($pdo);
+    $courses = $course_dao->selectAll();
 
     require("../views/index_view.php");
 } catch(PDOException $e) {
