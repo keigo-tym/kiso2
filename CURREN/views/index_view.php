@@ -6,6 +6,7 @@
 <body>
     <?php require("../views/_header_view.php"); ?>
     <main class="container py-4">
+        <?php require("../views/_message_view.php"); ?>
         <div class="row mt-3">
             <div class="col-12">
                 <h3>Courses</h3>
