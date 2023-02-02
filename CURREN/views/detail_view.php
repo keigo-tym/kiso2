@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
-<?php require("../views/_head_view.php"); ?>
+<?php require("_head_view.php"); ?>
 <body>
-    <?php require("../views/_header_view.php"); ?>
+    <?php require("_header_view.php"); ?>
     <main class="container py-4">
+        <?php require("_message_view.php"); ?>
         <div class="row mt-3">
             <div class="col-12">
                 <h3>Sections</h3>
@@ -34,9 +35,17 @@
                     playsinline controls class="section-video"></video>
                 <hr>
                 <h5 class="my-4"><?= h($course["course_title"]) ?> - Section <?= h($current_section["no"]) ?> : <?= h($current_section["title"]) ?></h5>
+                <?php if (is_sign_in()) { ?>
+                    <form action="history_post.php" method="post">
+                        <input type="hidden" name="csrf_token" value="<?= h($csrf_token) ?>" />
+                        <input type="hidden" name="course_id" value="<?= h($course["id"]) ?>">
+                        <input type="hidden" name="section_id" value="<?= h($current_section["id"]) ?>">
+                        <button type="submit" class="btn btn-primary">Finish</button>
+                    </form>
+                <?php } ?>
             </div>
         </div>
     </main>
-    <?php require("../views/_footer_view.php"); ?>
+    <?php require("_footer_view.php"); ?>
 </body>
 </html>
