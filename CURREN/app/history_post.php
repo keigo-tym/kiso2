@@ -35,7 +35,7 @@ if ($section_id === "") {
     exit();
 }
 if (filter_var($section_id, FILTER_VALIDATE_INT) === false) {
-    error_log("Validate:course_id is not int.");
+    error_log("Validate:section_id is not int.");
     header("Location: error.php");
     exit();
 }
