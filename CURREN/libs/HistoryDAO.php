@@ -32,7 +32,7 @@ class HistoryDAO
                     inner join courses co on se.course_id = co.id
                 where
                     hi.account_id = :account_id
-                oeder by
+                order by
                     hi.created_at desc";
         $ps = $this->pdo->prepare($sql);
         $ps->bindValue(":account_id", $account_id, PDO::PARAM_INT);
