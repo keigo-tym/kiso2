@@ -46,7 +46,7 @@ class SectionDAO
                 order by no";
         $ps = $this->pdo->prepare($sql);
         $ps->bindValue(":course_id", $course_id, PDO::PARAM_INT);
-        $ps->bindValue("account_id", $account_id, PDO::PARAM_INT);
+        $ps->bindValue(":account_id", $account_id, PDO::PARAM_INT);
         $ps->execute();
         $sections = $ps->fetchAll();
         return $sections;
