@@ -24,7 +24,7 @@
                         <?php foreach ($sections as $section) { ?>
                         <li class="list-group-item">
                             <a href="detail.php?course_id=<?= h($course["id"]) ?>&section_id=<?= h($section["id"]) ?>"
-                            class="<?= is_sign_in() && $section['created_at'] != null ? 'section-finished' : '' ?>">
+                                class="<?= is_sign_in() && $section['created_at'] != null ? 'section-finished' : "" ?>">
                                 Section <?= h($section["no"]) ?> : <?= h($section["title"]) ?></a>
                         </li>
                         <?php } ?>
