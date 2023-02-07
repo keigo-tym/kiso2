@@ -13,7 +13,7 @@ try {
     $pdo = new_PDO();
 
     $history_dao = new HistoryDAO($pdo);
-    $histories = $history_dao->selectByAccountId(account_id);
+    $histories = $history_dao->selectByAccountId($account_id);
     if (count($histories)) {
         set_message(MESSAGE_NO_LEARNING_HISTORY);
     }
